@@ -10,8 +10,8 @@ list_len = input('Задайте длину списка: ')
 if list_len.isdigit():
     list_len = int(list_len)
     for i in range(list_len):
-
         my_list.append(input('Задайте {0}-й элемент списка: '.format(i+1)))
+    my_list.sort()
     print(my_list)
 else:
     print('Задана некорректная длина списка')
