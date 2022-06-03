@@ -6,9 +6,11 @@
 Вывести новый список на экран
 """
 input_is_correct = True
-my_str = input('Через запятую введите любые цифры: ')
+sep_ch = ','
+sep_ch = input('Задайте символ-разделитель для элементов списка: ')
+my_str = input('Через {0} введите любые цифры: '.format(sep_ch))
 my_list = list()
-list_from_str = my_str.split(',')
+list_from_str = my_str.split(sep_ch)
 for elem in list_from_str:
     if elem.isdigit():
         if not int(elem) in my_list: my_list.append(int(elem))
